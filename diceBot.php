@@ -3,9 +3,9 @@ use Discord\Discord;
 use Discord\WebSockets\Event;
 use Discord\WebSockets\Intents;
 require_once('./vendor/autoload.php');
-require_once('./key.php');
 
-$key = getKey();
+$env = parse_ini_file('.env');
+$key = $env['KEY'];
 
 $discord = new Discord(['token'=>$key]);
 
