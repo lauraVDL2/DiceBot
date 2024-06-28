@@ -4,7 +4,8 @@ use Discord\WebSockets\Event;
 use Discord\WebSockets\Intents;
 require_once('./vendor/autoload.php');
 
-$discord = new Discord(['token'=> 'MTE1NTE0MDYyNjc5NTQ3OTE1MQ.G_94gG.Z9m13tTMij-rlR04KeOEzjEy8wMdAK8A47DE80']);
+$key = getenv('KEY');
+$discord = new Discord(['token'=> $key]);
 
 function fateDice($turns) {
     $result = array();
